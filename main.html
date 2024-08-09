@@ -11,17 +11,15 @@
 		function secondHighest(arr) {
 			//Write your code here
 			arr.sort((a,b)=>{return(b-a)});
+			for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < arr[0]) {
+        return arr[i];
+    }
+}
+return -Infinity;
 			
                   
-			if((arr.length==0) || (arr.length==1) || arr.every( (val, i, arr) => val === arr[0] )){
-				return -Infinity;
-				}
-				
-			else {
-				
-				return arr[1];
-
-			}
+			
 			
 		}
 
